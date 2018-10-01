@@ -1,0 +1,34 @@
+<div class="col-md-6">
+  <h2> Employee List</h2>
+  <br>
+  <app-emp-count *ngIf="employeeList" [all]="getTotalEmpCount()"
+            [male]="getTotalMaleEmpCount()"
+            [female]="getTotalFemaleEmpCount()"
+            (countSelectedChange)="onEmpCountChanged($event)"></app-emp-count>
+  <br><br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="hidden">Code</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Salary</th>
+      <th>Date Of Birth</th>
+    </tr>
+    </thead>
+    <tbody>
+    <ng-container *ngFor="let emp of employeeList; trackBy:trackByEmpCode">
+	    <tr *ngIf="selectedEmpCountRadioButton == 'All' || selectedEmpCountRadioButton == emp.gender">
+	      <td class="hidden">{{emp.code}}</td>
+	      <td>{{emp.name}}</td>
+	      <td>{{emp.gender}}</td>
+	      <td>{{emp.salary}}</td>
+	       <td>{{emp.dateOfBirth}}</td>
+	      <!-- <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete</button>
+	        <button class="btn btn-danger" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td> -->
+	    </tr>
+    </ng-container>
+    </tbody>
+  </table>
+</div>
+

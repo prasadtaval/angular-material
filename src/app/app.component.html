@@ -1,0 +1,23 @@
+<mat-sidenav-container class="example-container mat-typography">
+  <mat-sidenav #sidenav mode="side">
+    <app-main-nav [links]="links"></app-main-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <div class="flex-left">
+        <mat-icon id="main-nav-button" (click)="sidenav.toggle()" *ngIf="isLogged()">menu</mat-icon>
+        <h1 id="page-title">{{appTitle}}
+          <span *ngIf="title"> - {{title}}</span>
+        </h1>
+      </div>
+      <div class="flex-right">
+          <button mat-button (click)="logOut()" *ngIf="isLogged()">Log out</button>
+      </div>
+    </mat-toolbar>
+    <main (click)="sidenav.close()">
+      <router-outlet></router-outlet>
+    </main>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from "@angular/common/http";
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -80,7 +81,8 @@ import { CDLoopDecorator }  from './directive/structural-directives/cd-loop.dire
     TitleService,
     UserService,
     AuthService,
-    AuthGuardService
+    AuthGuardService,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

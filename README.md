@@ -1,4 +1,6 @@
-# Angular Demo
+This project was generated with Angular CLI version 6.0.3
+
+# Angular 6 Demo
 
 > This project is only useful if you want to use the **Angular Material** framework.
 

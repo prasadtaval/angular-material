@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Login GUI
 - Login logic implementation
 - Responsive side nav
-- Navigation links with icons
+- Navigation links with icons 
 - Toolbar
 - Home page
 - Employee page (Stub Data)

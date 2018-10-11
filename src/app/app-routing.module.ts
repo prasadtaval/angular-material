@@ -8,6 +8,7 @@ import { AddUserComponent } from './pages/add-user/add-user.component';
 import { EditUserComponent } from './pages/edit-user/edit-user.component';
 import {ListUserComponent} from "./pages/list-user/list-user.component";
 import {DirectiveSampleComponent} from "./pages/directive-sample/directive-sample.component";
+import { MultipleObservablesComponent } from "./pages/multiple-observables/multiple-observables.component";
 
 const appRoutes: Routes = [
 	{
@@ -49,6 +50,10 @@ const appRoutes: Routes = [
 		component: DirectiveSampleComponent,
 		canActivate: [AuthGuardService],
 	},
+	{
+		path: 'multipleobservables',
+		component: MultipleObservablesComponent
+	}
 ];
 
 @NgModule({

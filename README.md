@@ -1,4 +1,5 @@
-# Angular Demo
+
+# Angular 6 Demo
 
 > This project is only useful if you want to use the **Angular Material** framework.
 

@@ -47,7 +47,7 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'directive',
-		component: DirectiveSampleComponent
+		component: DirectiveSampleComponent 
 	},
 	{
 		path: 'multipleobservables',

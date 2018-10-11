@@ -42,7 +42,7 @@ export class AppComponent {
 
   ngAfterViewChecked(): void {
     this.titleService.titleEmitter.subscribe(title => {
-      this.title = title;
+      //this.title = title;
       this.cdRef.detectChanges();
     });
   }

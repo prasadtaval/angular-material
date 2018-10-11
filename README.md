@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## What does this project include?
 
 - Login GUI
-- Login logic implementation
+- Login logic implementation (Template Driven Forms)
 - Responsive side nav
 - Navigation links with icons 
 - Toolbar

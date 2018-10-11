@@ -47,8 +47,7 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'directive',
-		component: DirectiveSampleComponent,
-		canActivate: [AuthGuardService],
+		component: DirectiveSampleComponent
 	},
 	{
 		path: 'multipleobservables',

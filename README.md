@@ -17,6 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - User page (Dummy API Call & Reactive Forms for Add and Update User) 
 - Directive Sample (Attribute & Structural Directives)
 - Customizable theme colors
+- Multiple Observables example
 
 ## Customize colors
 

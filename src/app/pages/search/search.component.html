@@ -1,12 +1,13 @@
 <!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
   {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
 </button> -->
+<div >
 <mat-vertical-stepper [linear]="!isLinear" #stepper>
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Fill out Application name</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        <input matInput placeholder="Application name" formControlName="firstCtrl" required>
       </mat-form-field>
       <div>
         <button mat-button matStepperNext>Next</button>
@@ -17,9 +18,12 @@
     <form [formGroup]="secondFormGroup">
       <ng-template matStepLabel>Fill out Enviroment</ng-template>
       <mat-form-field>
-        dropdown ->Production T1 T2 T3
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
+          <mat-select placeholder="Production"  formControlName="secondCtrl" required>
+            <mat-option *ngFor="let item of productionEnv" [value]="item.value">
+              {{item.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
@@ -30,7 +34,7 @@
     <form [formGroup]="thirdFormGroup">
       <ng-template matStepLabel>Fill out the regular expression</ng-template>
       <mat-form-field>
-        <input matInput placeholder="Address" formControlName="thirdCtrl" required>
+        <input matInput placeholder="Regular Expression" formControlName="thirdCtrl" required>
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
@@ -41,23 +45,39 @@
   <mat-step [stepControl]="forthFormGroup">
       <form [formGroup]="forthFormGroup">
         <ng-template matStepLabel>Fill out the Date</ng-template>
-        <mat-form-field>
-          from date and to date
-          <input matInput placeholder="Address" formControlName="forthCtrl" required>
-        </mat-form-field>
+        <div fxLayoutAlign="space-between center" fxLayout="row">
+            <mat-form-field fxFlex="30">
+              <input matInput [matDatepicker]="fromDatePicker" placeholder="From date" formControlName="fromDate">
+              <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #fromDatePicker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field fxFlex="30">
+              <input matInput [matDatepicker]="toDatePicker" placeholder="To date"  formControlName="toDate">
+              <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #toDatePicker color="primary"></mat-datepicker>
+            </mat-form-field>
+            <div fxFlex="30">
+            </div>
+          </div>
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>
     </mat-step>
-    <mat-step [stepControl]="forthFormGroup">
-        <form [formGroup]="forthFormGroup">
+    <mat-step [stepControl]="fifthFormGroup">
+        <form [formGroup]="fifthFormGroup">
           <ng-template matStepLabel>Fill out Creditional</ng-template>
-          <mat-form-field>
-            UID and PWD
-            <input matInput placeholder="Address" formControlName="forthCtrl" required>
-          </mat-form-field>
+          <div>
+            <mat-form-field>
+              <input matInput placeholder="User ID" formControlName="fifthCtrlUID" required>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+                <input matInput placeholder="Password" formControlName="fifthCtrlPWD" required>
+            </mat-form-field>
+          </div>            
           <div>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
@@ -74,10 +94,22 @@
     </div>
   </mat-step>
 </mat-vertical-stepper>
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-</table>
+</div>
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Enviroment</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Enviroment</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

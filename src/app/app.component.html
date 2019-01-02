@@ -11,9 +11,9 @@
           <span *ngIf="title"> - {{title}}</span>
         </h1>
       </div>
-      <div class="flex-right">
+      <!-- <div class="flex-right">
           <button mat-button (click)="logOut()" *ngIf="isLogged()">Log out</button>
-      </div>
+      </div> -->
     </mat-toolbar>
     <main (click)="sidenav.close()">
       <router-outlet></router-outlet>

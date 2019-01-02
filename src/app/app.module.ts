@@ -9,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { LoginComponent } from './pages/login/login.component';
-import { MatCardModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatProgressSpinnerModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatStepperModule, MatAutocompleteModule } from '@angular/material';
+import { MatSelectModule, MatDatepickerModule, MatNativeDateModule , MatCardModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatProgressSpinnerModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatStepperModule, MatAutocompleteModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { SnackBarService } from './services/snack-bar.service';
@@ -91,7 +91,8 @@ import { CDLoopDecorator }  from './directive/structural-directives/cd-loop.dire
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatStepperModule, MatAutocompleteModule
+    MatStepperModule, MatAutocompleteModule,
+    MatSelectModule ,MatDatepickerModule, MatNativeDateModule 
   ],
   providers: [
     SnackBarService,

@@ -12,6 +12,8 @@ export class SearchComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
   thirdFormGroup: FormGroup;
+  forthFormGroup: FormGroup;
+  fifthFormGroup: FormGroup;
 
   constructor(private _formBuilder: FormBuilder) {}
 
@@ -25,7 +27,21 @@ export class SearchComponent implements OnInit {
     this.thirdFormGroup = this._formBuilder.group({
       thirdCtrl: ['', Validators.required]
     });
+    this.forthFormGroup = this._formBuilder.group({
+      fromDate: ['', Validators.required],
+      toDate: ['', Validators.required]
+    });
+    this.fifthFormGroup = this._formBuilder.group({
+      fifthCtrlUID: ['', Validators.required],
+      fifthCtrlPWD: ['', Validators.required]
+    });
   }
+
+  productionEnv: any = [
+    {value: 't01', viewValue: 'T01'},
+    {value: 't02', viewValue: 'T02'},
+    {value: 't03', viewValue: 'T03'}
+  ];
 
   onSubmit(): void{
     alert("Submited");

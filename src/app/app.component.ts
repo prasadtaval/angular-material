@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  appTitle = 'Application';
+  appTitle = 'Sunrise Application';
   title = '';
 
   links = links;
@@ -32,7 +32,7 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-
+    this.sidenav.open();
     this.snackBarService.snackBarEmitter.subscribe(result => {
       this.snackBar.open(result.message, result.action, {
         duration: 2000,

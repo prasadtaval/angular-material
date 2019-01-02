@@ -6,9 +6,10 @@ import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchComponent } from './pages/search/search.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { LoginComponent } from './pages/login/login.component';
-import { MatCardModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatProgressSpinnerModule, MatSidenavModule, MatToolbarModule, MatIconModule } from '@angular/material';
+import { MatCardModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatSnackBarModule, MatProgressSpinnerModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatStepperModule, MatAutocompleteModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { SnackBarService } from './services/snack-bar.service';
@@ -48,6 +49,7 @@ import { CDLoopDecorator }  from './directive/structural-directives/cd-loop.dire
   declarations: [
     AppComponent,
     HomeComponent,
+    SearchComponent,
     MainNavComponent,
     LoginComponent,
     EmpListComponent,
@@ -88,7 +90,8 @@ import { CDLoopDecorator }  from './directive/structural-directives/cd-loop.dire
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatStepperModule, MatAutocompleteModule
   ],
   providers: [
     SnackBarService,

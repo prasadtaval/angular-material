@@ -3,3 +3,13 @@ body {
   margin: 0;
   padding: 0;
 }
+.mat-sidenav {
+  background: linear-gradient(#e6003c,#faa600);
+  box-shadow: 2px 0 5px 0 rgba(0,0,0,.25);
+  width: 150px;
+}
+.mat-drawer{
+  background: linear-gradient(#e6003c,#faa600);
+  box-shadow: 2px 0 5px 0 rgba(0,0,0,.25);
+  width: 150px;
+}

@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     this.titleService.setTitle('Login');
 
     if (this.authService.userIsLogged) {
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/home']);
     }
   }
 
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
 
     if (!this.email || !this.password) {
 
-      this.snackBarService.open('ERROR - Faltan campos por rellenar');
+      this.snackBarService.open('ERROR-');
       return;
     }
 

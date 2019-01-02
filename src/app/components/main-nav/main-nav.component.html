@@ -1,6 +1,6 @@
 <ul>
   <li id="main-nav-header">
-    <h2>Menu</h2>
+    <h2><mat-icon id="main-nav-button">menu</mat-icon></h2>
   </li>
   <li *ngFor="let link of links" routerLink="/{{link.link}}" routerLinkActive="active">
     <mat-icon *ngIf="link.icon">{{link.icon}}</mat-icon>

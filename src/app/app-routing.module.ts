@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchComponent } from './pages/search/search.component';
 import { AuthGuardService } from './services/auth/auth-guard.service';
 import { LoginComponent } from './pages/login/login.component';
 import { EmpListComponent } from './pages/emp-list/emp-list.component';
@@ -23,6 +24,11 @@ const appRoutes: Routes = [
 	{
 		path: 'home',
 		component: HomeComponent,
+		canActivate: [AuthGuardService],
+	},
+	{
+		path: 'search',
+		component: SearchComponent,
 		canActivate: [AuthGuardService],
 	},
 	{

@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  appTitle = 'Sunrise Application';
+  appTitle = 'Application';
   title = '';
 
   links = links;
